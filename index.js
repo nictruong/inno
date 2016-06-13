@@ -44,6 +44,13 @@ app.put('/tv/channels/:channel', function(req, res) {
 	res.send(JSON.stringify({message: "Channel changed to " + channel}));
 });
 
+app.put('/tv/record/:channel', function(req, res) {
+	var channel = req.params.channel;
+
+	res.setHeader('Content-Type', 'application/json');
+	res.send(JSON.stringify({message: "Recording channel: " + channel}));
+});
+
 
 app.listen(3000, function() {
 	console.log('Example app listening on port 3000!');

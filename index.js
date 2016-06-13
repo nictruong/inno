@@ -44,11 +44,11 @@ app.put('/tv/channels/:channel', function(req, res) {
 	res.send(JSON.stringify({message: "Channel changed to " + channel}));
 });
 
-app.put('/tv/record/:channel', function(req, res) {
+app.put('/tv/channels/:channel/record', function(req, res) {
 	var channel = req.params.channel;
 
 	res.setHeader('Content-Type', 'application/json');
-	res.send(JSON.stringify({message: "Recording channel: " + channel}));
+	res.send(JSON.stringify({message: "Recording channel channel}));
 });
 
 

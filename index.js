@@ -31,6 +31,7 @@ app.delete('/tv', function(req, res) {
 		console.log('stderr: ' + stderr);
 		if (error !== null) {
 			console.log('exec error: ' + error);
+			res.sendStatus(500);
 		}else{		
 			res.sendStatus(200);
 		}
